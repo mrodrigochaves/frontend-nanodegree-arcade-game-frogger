@@ -1,5 +1,5 @@
-# frontend-nanodegree-arcade-game-frogger
-Arcade Game Project: Frogger
+# Arcade Game Frogger
+
 Project of Frond-End Developer Nanodegree program from Udacity.
 
 Rules of the game

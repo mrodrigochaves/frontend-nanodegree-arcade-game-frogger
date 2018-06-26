@@ -21,6 +21,11 @@ Enemy.prototype.update = function(dt) {
     if (this.x >= 505) {
         this.x = 0;
     }
+     if(player.x >= this.x - 50 && player.x <= this.x + 50){
+     if(player.y >= this.y - 50 && player.y <= this.y + 50){
+            this.reset();
+        }
+    }
 
 };
 
@@ -50,25 +55,40 @@ Player.prototype.render = function() {
 
 //HandleInput player
 Player.prototype.handleInput = function (direction) {
-   if (direction === 'left') {
-       player.x -= player.speed;
-   }
-   if (direction === 'up') {
-       player.y -= player.speed - 20;
-   }
-   if (direction === 'right') {
-       player.x += player.speed;
-   }
-   if (direction === 'down') {
-       player.y += player.speed - 20;
-   }
+   if ( direction === 'left' ) {
+        if ( this.x > 0 ) {
+            this.x = this.x - 100;
+        }
+    } else if ( direction === 'right' ) {
+        if ( this.x < 400 ) {
+            this.x = this.x + 100;
+        }
+    } else if ( direction === 'up' ) {
+        if ( this.y > 0 ) {
+            this.y = this.y - 80;
+        }
+    } else if ( direction === 'down') {
+        if ( this.y < 380 ) {
+            this.y = this.y + 80;
+        } 
+    }
+	//Winner reset
+    if(this.y < 10){
+        this.reset();
+    }
 };
-
+//Reset(restart) game
+Object.prototype.reset = function() {
+  player.x = 200;
+  player.y = 400;
+};
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-allEnemies = [];
+const allEnemies = [
+  new Enemy(0, 160, 20)
+  ];
 player = new Player();
 
 // This listens for key presses and sends the keys to your

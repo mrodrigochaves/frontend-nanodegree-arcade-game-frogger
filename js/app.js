@@ -17,10 +17,10 @@ Enemy.prototype.update = function(dt) {
    // You should multiply any movement by the dt parameter
    // which will ensure the game runs at the same speed for
    // all computers.
-    if (this.x <= 550) {
-       this.x += this.speed * dt;
-   } else {
-       this.x = -2;
+   this.x += this.speed * dt;
+    if (this.x >= 505) {
+        this.x = 0;
+    }
 
 };
 
@@ -33,17 +33,14 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player = function(x, y, speed) {
-    this.x = x;
-    this.y = y;
+    this.x = 205;
+    this.y = 380;
     this.speed = speed;
 	this.sprite = 'images/char-princess-girl.png';
 };
 
 //Update player
-Player.prototype.update = function (x, y, speed) {
-    this.x = x;
-    this.y = y;
-    this.speed = this.speed;
+Player.prototype.update = function () {
 };
 
 //Render player

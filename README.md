@@ -1,4 +1,4 @@
-# Arcade Game Frogger
+# Clone Arcade Game Frogger
 
 Project of [Frond-End Developer Nanodegree](https://br.udacity.com/course/front-end-web-developer-nanodegree--nd001-br-advanced) program from @Udacity
 

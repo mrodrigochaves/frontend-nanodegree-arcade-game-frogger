@@ -1,8 +1,8 @@
 # Arcade Game Frogger
 
-Project of [Frond-End Developer Nanodegree](https://br.udacity.com/course/front-end-web-developer-nanodegree--nd001-br-advanced) program from [Udacity](https://br.udacity.com/).
+Project of [Frond-End Developer Nanodegree](https://br.udacity.com/course/front-end-web-developer-nanodegree--nd001-br-advanced) program from @Udacity
 
-Rules of the game:
+**Rules of the game:**
 ```
 Reach the water
 Avoid the bugs

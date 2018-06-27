@@ -32,7 +32,7 @@ this.x = x;
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-        const Player = function() {
+        const Player = function(speed) {
         this.x = 205;
                 this.y = 380;
                 this.speed = speed;

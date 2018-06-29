@@ -1,3 +1,4 @@
+'use strict';
 // Enemies our player must avoid
 const Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
@@ -65,7 +66,7 @@ Player.prototype.handleInput = function(direction) {
     }
 };
 // Check for collision between enemy and player
-const checkCollisions = function() {
+const checkCollisions = function(anEnemy) {
     for (anEnemy of allEnemies) {
         if (player.y + 131 >= anEnemy.y + 90 && player.x + 25 <= anEnemy.x + 88 && player.y + 73 <= anEnemy.y + 135 && player.x + 76 >= anEnemy.x + 11) {
             player.x = 202.5;
